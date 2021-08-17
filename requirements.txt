@@ -10,4 +10,3 @@ numpy==1.18.5
 pandas==1.1.0
 Pillow==8.2.0
 seaborn==0.11.1
-tensorflow
