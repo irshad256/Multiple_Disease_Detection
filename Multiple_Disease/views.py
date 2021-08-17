@@ -2,7 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 import pickle
 import numpy as np
-from tensorflow.keras.models import load_model
+from keras.models import load_model
 from PIL import Image
 
 def home(request):
