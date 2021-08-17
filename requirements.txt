@@ -8,3 +8,4 @@ keras-ocr==0.8.6
 Keras-Preprocessing==1.1.2
 numpy==1.18.5
 Pillow==8.2.0
+gunicorn==20.1.0
