@@ -1,0 +1,78 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<div class='container' style="margin-top: 5%;">
+    <center><h1>Heart Disease Predictor</h1></center>
+    <div class='form_class'>
+        <form action="{% url 'heartresult' %}"  method="POST">
+            {% csrf_token %}
+            <div class='row mb-3'>
+                <div class='col-sm-3'>
+                    <div class='form-group'>
+                        <input type="text"  placeholder="Age" required name="age" class='form-control'>
+                    </div>
+                </div>
+                <div class='col-sm-3'>
+                    <div class='form-group'>
+                        <input type="text"  placeholder="sex (Female:0 ,Male:1)" required name="sex" class='form-control'>
+                    </div>
+                </div>
+                <div class='col-sm-3'>
+                    <div class='form-group'>
+                        <input type="text"  placeholder="chest pain type" required name="cp" class='form-control'>
+                    </div>
+                </div>
+                <div class='col-sm-3'>
+                    <div class='form-group'>
+                        <input type="text"  placeholder="resting blood pressure (in mm Hg)" required name="trestbps" class='form-control'>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class='col-sm-3'>
+                    <div class='form-group'>
+                        <input type="text"  placeholder="resting electrocardiographic results" required name="restecg" class='form-control'>
+                    </div>
+                </div>
+                <div class='col-sm-3'>
+                    <div class='form-group'>
+                        <input type="text"  placeholder="maximum heart rate achieved" required name="thalach" class='form-control'>
+                    </div>
+                </div>
+                <div class='col-sm-3'>
+                    <div class='form-group'>
+                        <input type="text"  placeholder="exercise induced angina (1 = yes; 0 = no)" required name="exang" class='form-control'>
+                    </div>
+                </div>
+                <div class='col-sm-3'>
+                    <div class='form-group'>
+                        <input type="text"  placeholder="ST depression induced by exercise relative to rest" required name="oldpeak" class='form-control'>
+                    </div>
+                </div> 
+            </div>
+            <div class="row mb-3">
+                <div class='col-sm-3'>
+                    <div class='form-group'>
+                        <input type="text"  placeholder="the slope of the peak exercise ST segment" required name="slope" class='form-control'>
+                    </div>
+                </div>
+                <div class='col-sm-3'>
+                    <div class='form-group'>
+                        <input type="text"  placeholder="number of major vessels (0-3) colored by flourosopy" required name="ca" class='form-control'>
+                    </div>
+                </div>
+                <div class='col-sm-3'>
+                    <div class='form-group'>
+                        <input type="text"  placeholder="thal" required name="thal" class='form-control'>
+                    </div>
+                </div>
+            </div>
+            <div class="d-grid gap-2">
+                <input type="submit" class="btn btn-primary" value="Predict">
+            </div>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}

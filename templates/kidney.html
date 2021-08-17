@@ -1,0 +1,146 @@
+{% extends 'main.html' %}
+{% block content %}
+
+
+<div class='container' style="margin-top: 5%;">
+    <center><h1>Kidney Disease</h1></center>
+        <form action="{% url 'kidneyresult' %}"  method="POST">
+            {% csrf_token %}
+            <div class="row mb-3">
+                <div class='col-sm-3'>
+                    <div class='form-group'>
+                        <input type="text"  placeholder="age" required name="age" class='form-control'>
+                    </div>
+                </div>
+                <div class='col-sm-3'>
+                    <div class='form-group'>
+                        <input type="text"  placeholder="bp" required name="bp" class='form-control'>
+                    </div>
+                </div>
+                <div class='col-sm-3'>
+                    <div class='form-group'>
+                        <input type="text"  placeholder="sg" required name="sg" class='form-control'>
+                    </div>
+                </div>
+                <div class='col-sm-3'>
+                    <div class='form-group'>
+                        <input type="text"  placeholder="al" required name="al" class='form-control'>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class='col-sm-3'>
+                    <div class='form-group'>
+                        <input type="text"  placeholder="su" required name="su" class='form-control'>
+                    </div>
+                </div>
+                <div class='col-sm-3'>
+                    <div class='form-group'>
+                        <input type="text"  placeholder="rbc (0:abnormal, 1:normal)" required name="rbc" class='form-control'>
+                    </div>
+                </div>
+                <div class='col-sm-3'>
+                    <div class='form-group'>
+                        <input type="text"  placeholder="pc (0:abnormal, 1:normal)" required name="pc" class='form-control'>
+                    </div>
+                </div>
+                <div class='col-sm-3'>
+                    <div class='form-group'>
+                        <input type="text"  placeholder="pcc (0:not present , 1:present)" required name="pcc" class='form-control'>
+                    </div>
+                </div> 
+            </div>
+            <div class="row mb-3">
+                <div class='col-sm-3'>
+                    <div class='form-group'>
+                        <input type="text"  placeholder="ba (0:not present , 1:present)" required name="ba" class='form-control'>
+                    </div>
+                </div>
+                <div class='col-sm-3'>
+                    <div class='form-group'>
+                        <input type="text"  placeholder="bgr" required name="bgr" class='form-control'>
+                    </div>
+                </div>
+                <div class='col-sm-3'>
+                    <div class='form-group'>
+                        <input type="text"  placeholder="bu" required name="bu" class='form-control'>
+                    </div>
+                </div>
+                <div class='col-sm-3'>
+                    <div class='form-group'>
+                        <input type="text"  placeholder="sc" required name="sc" class='form-control'>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class='col-sm-3'>
+                    <div class='form-group'>
+                        <input type="text"  placeholder="sod" required name="sod" class='form-control'>
+                    </div>
+                </div>
+                <div class='col-sm-3'>
+                    <div class='form-group'>
+                        <input type="text"  placeholder="pot" required name="pot" class='form-control'>
+                    </div>
+                </div>
+                <div class='col-sm-3'>
+                    <div class='form-group'>
+                        <input type="text"  placeholder="hemo" required name="hemo" class='form-control'>
+                    </div>
+                </div>
+                <div class='col-sm-3'>
+                    <div class='form-group'>
+                        <input type="text"  placeholder="pcv" required name="pcv" class='form-control'>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class='col-sm-3'>
+                    <div class='form-group'>
+                        <input type="text"  placeholder="wc" required name="wc" class='form-control'>
+                    </div>
+                </div>
+                <div class='col-sm-3'>
+                    <div class='form-group'>
+                        <input type="text"  placeholder="rc" required name="rc" class='form-control'>
+                    </div>
+                </div>
+                <div class='col-sm-3'>
+                    <div class='form-group'>
+                        <input type="text"  placeholder="htn (0:no , 1:yes)" required name="htn" class='form-control'>
+                    </div>
+                </div>
+                <div class='col-sm-3'>
+                    <div class='form-group'>
+                        <input type="text"  placeholder="dm (0:no , 1:yes)" required name="dm" class='form-control'>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class='col-sm-3'>
+                    <div class='form-group'>
+                        <input type="text"  placeholder="cad (0:no , 1:yes)" required name="cad" class='form-control'>
+                    </div>
+                </div>
+                <div class='col-sm-3'>
+                    <div class='form-group'>
+                        <input type="text"  placeholder="appet (0:good , 1:poor)" required name="appet" class='form-control'>
+                    </div>
+                </div>
+                <div class='col-sm-3'>
+                    <div class='form-group'>
+                        <input type="text"  placeholder="pe (0:no , 1:yes)" required name="pe" class='form-control'>
+                    </div>
+                </div>
+                <div class='col-sm-3'>
+                    <div class='form-group'>
+                        <input type="text"  placeholder="ane (0:no , 1:yes)" required name="ane" class='form-control'>
+                    </div>
+                </div>
+            </div>
+            <div class="d-grid gap-2">
+                <input type="submit" class="btn btn-primary" value="Predict">
+            </div>
+        </form>
+</div>
+{% endblock %}

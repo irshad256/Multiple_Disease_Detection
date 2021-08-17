@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<div class='container' style="margin-top: 5%;">
+    <center><h1>Pneumonia Prediction</h1>
+    <div class='card card-body'>
+        <h3>Please upload the image of the cell</h3>
+        <form action="{% url 'pneumoniaresult' %}"  method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file" required name="image" >
+            <br>
+            <br>
+            <div>
+                <input type="submit" class="btn btn-primary" value="Predict">
+            </div>
+        </form>
+    </div>
+    </center>
+</div>
+
+{% endblock %}

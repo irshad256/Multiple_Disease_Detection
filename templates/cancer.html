@@ -1,0 +1,110 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<div class='container' style="margin-top: 5%;">
+    <center><h1>Breast Cancer Predictor</h1></center>
+        <form action="{% url 'cancerresult' %}" method="POST">
+        {% csrf_token %}
+        <div class='row mb-3'>
+            <div class='col-sm-3'>
+                <div class='form-group'>
+                    <input type="text"  placeholder="texture_mean" required name="texture_mean" class='form-control'>
+                </div>
+            </div>
+            <div class='col-sm-3'>
+                <div class='form-group'>
+                    <input type="text"  placeholder="area_mean" required name="area_mean" class='form-control'>
+                </div>
+            </div>
+            <div class='col-sm-3'>
+                <div class='form-group'>
+                    <input type="text"  placeholder="smoothness_mean" required name="smoothness_mean" class='form-control'>
+                </div>
+            </div>
+            <div class='col-sm-3'>
+                <div class='form-group'>
+                    <input type="text"  placeholder="compactness_mean" required name="compactness_mean" class='form-control'>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class='col-sm-3'>
+                <div class='form-group'>
+                    <input type="text"  placeholder="concavity_mean" required name="concavity_mean" class='form-control'>
+                </div>
+            </div>
+            <div class='col-sm-3'>
+                <div class='form-group'>
+                    <input type="text"  placeholder="symmetry_mean" required name="symmetry_mean" class='form-control'>
+                </div>
+            </div>
+            <div class='col-sm-3'>
+                <div class='form-group'>
+                    <input type="text"  placeholder="area_se" required name="area_se" class='form-control'>
+                </div>
+            </div>
+            <div class='col-sm-3'>
+                <div class='form-group'>
+                    <input type="text"  placeholder="smoothness_se" required name="smoothness_se" class='form-control'>
+                </div> 
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class='col-sm-3'>
+                <div class='form-group'>
+                    <input type="text"  placeholder="compactness_se" required name="compactness_se" class='form-control'>
+                </div>
+            </div>
+            <div class='col-sm-3'>
+                <div class='form-group'>
+                    <input type="text"  placeholder="concavity_se" required name="concavity_se" class='form-control'>
+                </div>
+            </div>
+            <div class='col-sm-3'>
+                <div class='form-group'>
+                    <input type="text"  placeholder="concave points_se" required name="concave points_se" class='form-control'>
+                </div>
+            </div>
+            <div class='col-sm-3'>
+                <div class='form-group'>
+                    <input type="text"  placeholder="fractal_dimension_se" required name="fractal_dimension_se" class='form-control'>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class='col-sm-3'>
+                <div class='form-group'>
+                    <input type="text"  placeholder="smoothness_worst" required name="smoothness_worst" class='form-control'>
+                </div>
+            </div>
+            <div class='col-sm-3'>
+                <div class='form-group'>
+                    <input type="text"  placeholder="compactness_worst" required name="compactness_worst" class='form-control'>
+                </div>
+            </div>
+            <div class='col-sm-3'>
+                <div class='form-group'>
+                    <input type="text"  placeholder="concavity_worst" required name="concavity_worst" class='form-control'>
+                </div>
+            </div>
+            <div class='col-sm-3'>
+                <div class='form-group'>
+                    <input type="text"  placeholder="symmetry_worst" required name="symmetry_worst" class='form-control'>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class='col-sm-3'>
+                <div class='form-group'>
+                    <input type="text"  placeholder="fractal_dimension_worst" required name="fractal_dimension_worst" class='form-control'>
+                </div>
+            </div>
+        </div>
+        <div class="d-grid gap-2">
+            <input type="submit" class="btn btn-primary" value="Predict">
+        </div>
+    </form>
+    
+</div>
+
+{% endblock %}
